@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane fx:id="GridPaneMain" alignment="CENTER" hgap="10" prefHeight="500.0" prefWidth="500.0" styleClass="background" stylesheets="@backgnd.css" vgap="10" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <AnchorPane fx:id="AnchorPaneMain" blendMode="LIGHTEN" prefHeight="500.0" prefWidth="500.0" styleClass="background" stylesheets="@backgnd.css" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+         <children>
+            <ImageView fx:id="ImageViewMain" blendMode="DIFFERENCE" fitHeight="481.0" fitWidth="500.0" layoutY="5.0" pickOnBounds="true" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="5.0">
+               <image>
+                  <Image url="@bg.jpg" />
+               </image>
+            </ImageView>
+            <Button fx:id="PlayButton" layoutX="217.0" layoutY="187.0" mnemonicParsing="false" onMousePressed="#PlayButtonCLicked" prefHeight="75.0" prefWidth="80.0" text="Play" />
+            <Button fx:id="SettingsButton" layoutX="116.0" layoutY="26.0" mnemonicParsing="false" onMousePressed="#SettingsButtonClicked" prefHeight="45.0" prefWidth="62.0" text="Settings" />
+            <Button fx:id="HelpButton" layoutX="328.0" layoutY="26.0" mnemonicParsing="false" onMousePressed="#HelpButtonClicked" prefHeight="45.0" prefWidth="62.0" text="Help" />
+            <Button fx:id="ExitButton" layoutX="328.0" layoutY="71.0" mnemonicParsing="false" onMousePressed="#ExitButtonClicked" prefHeight="45.0" prefWidth="62.0" text="Exit" />
+            <Button fx:id="TranslateButton" layoutX="196.0" layoutY="326.0" mnemonicParsing="false" onMouseClicked="#TranslationTry" text="TranslateButton" />
+            <Button layoutX="196.0" layoutY="365.0" mnemonicParsing="false" onMouseClicked="#SavedGamesButtonClicked" prefHeight="26.0" prefWidth="123.0" text="Saved Games" />
+         </children>
+      </AnchorPane>
+   </children>
+</GridPane>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+
+<AnchorPane fx:id="AnchorPaneGameplay" prefHeight="400.0" prefWidth="600.0" styleClass="background" stylesheets="@backgnd.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.GameplayPage">
+   <children>
+      <Circle fill="#0fee77" layoutX="300.0" layoutY="375.0" radius="20.0" stroke="#1b1919" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeType="INSIDE" strokeWidth="2.0" AnchorPane.bottomAnchor="5.0" />
+      <Button layoutX="455.0" layoutY="303.0" mnemonicParsing="false" text="Up" AnchorPane.rightAnchor="0.0" />
+      <Button layoutX="505.0" layoutY="329.0" mnemonicParsing="false" text="Down" AnchorPane.rightAnchor="0.0" />
+      <Button fx:id="BacktoMainMenuButton" alignment="CENTER" layoutX="531.0" mnemonicParsing="false" onMouseClicked="#BackToMainMenu" prefHeight="65.0" prefWidth="66.0" styleClass="background" stylesheets="@homebutton.css" textAlignment="CENTER" textFill="#171616" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <Button fx:id="PauseButtonGameplay" layoutX="35.0" layoutY="19.0" mnemonicParsing="false" onMouseClicked="#PauseButtonClicked" text="Pause" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <Button fx:id="SaveButtonGameplay" layoutX="260.0" mnemonicParsing="false" onMouseClicked="#SaveButtonClicked" prefHeight="26.0" prefWidth="66.0" text="Save" AnchorPane.topAnchor="0.0" />
+   </children>
+</AnchorPane>
