@@ -5,10 +5,10 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.shape.*?>
 
-<AnchorPane fx:id="AnchorPaneMotionPage" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.TranslationalTry">
+<AnchorPane fx:id="AnchorPaneMotionPage" prefHeight="640.0" prefWidth="420.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.TranslationalTry">
    <children>
-      <Button fx:id="TranlateButton" layoutX="520.0" layoutY="400.0" mnemonicParsing="false" onMouseClicked="#TranslateBars" text="Translate" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" />
-      <Group fx:id="HorBars" layoutX="10.0" layoutY="10.0">
+      <Button fx:id="TranlateButton" layoutX="320.0" layoutY="400.0" mnemonicParsing="false" onMouseClicked="#TranslateBars" text="Translate" AnchorPane.bottomAnchor="0.0" />
+      <Group fx:id="HorBars" layoutY="10.0">
          <children>
             <Rectangle fx:id="Bar1" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="100.0" stroke="BLACK" strokeType="INSIDE" width="10.0" />
             <Rectangle fx:id="Bar2" arcHeight="5.0" arcWidth="5.0" fill="#ff1f32" height="100.0" layoutX="30.0" stroke="BLACK" strokeType="INSIDE" width="10.0" />
@@ -16,7 +16,7 @@
             <Rectangle fx:id="Bar3" arcHeight="5.0" arcWidth="5.0" fill="#1fff4b" height="100.0" layoutX="60.0" stroke="BLACK" strokeType="INSIDE" width="10.0" />
          </children>
       </Group>
-      <Group fx:id="CrossObstacle" layoutY="140.0">
+      <Group fx:id="CrossObstacle" layoutY="190.0">
          <children>
             <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="50.0" layoutX="70.0" layoutY="10.0" stroke="BLACK" strokeType="INSIDE" width="10.0" x="1.0" />
             <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff821f" height="50.0" layoutX="70.0" layoutY="50.0" stroke="BLACK" strokeType="INSIDE" width="10.0" />
@@ -24,8 +24,8 @@
             <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff401f" height="50.0" layoutX="50.0" layoutY="30.0" rotate="90.0" stroke="BLACK" strokeType="INSIDE" width="10.0" />
          </children>
       </Group>
-      <Button fx:id="MotionButton" layoutX="350.0" layoutY="400.0" mnemonicParsing="false" onMouseClicked="#StartMotion" text="InitializeMotion" AnchorPane.bottomAnchor="0.0" />
-      <Group fx:id="SquareObstacle" layoutX="180.0" layoutY="110.0">
+      <Button fx:id="MotionButton" layoutX="300.0" layoutY="400.0" mnemonicParsing="false" onMouseClicked="#StartMotion" text="InitializeMotion" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="150.0" />
+      <Group fx:id="SquareObstacle" layoutX="200.0" layoutY="145.0">
          <children>
             <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="90.0" layoutY="40.0" stroke="BLACK" strokeType="INSIDE" width="10.0" />
             <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1fff41" height="90.0" layoutX="40.0" rotate="90.0" stroke="BLACK" strokeType="INSIDE" width="10.0" />
@@ -33,6 +33,17 @@
             <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff321f" height="90.0" layoutX="80.0" layoutY="40.0" stroke="BLACK" strokeType="INSIDE" width="10.0" />
          </children>
       </Group>
-      <Button layoutX="208.0" layoutY="373.0" mnemonicParsing="false" onMouseClicked="#BackToMainMenu" text="MainMenu" />
+      <Group fx:id="arcObstacle" layoutX="239.0" layoutY="190.0">
+         <children>
+            <Arc fx:id="redArc" fill="#2197ff00" layoutY="48.0" length="90.0" radiusX="100.0" radiusY="100.0" startAngle="90.0" stroke="#d41111" strokeType="INSIDE" strokeWidth="10.0" />
+            <Arc fx:id="greenArc" fill="#561ac700" layoutX="-4.0" layoutY="48.0" length="90.0" radiusX="100.0" radiusY="100.0" stroke="#13d126" strokeType="INSIDE" strokeWidth="10.0" />
+            <Arc fx:id="yellowArc" fill="#561ac700" layoutX="-1.0" layoutY="52.0" length="90.0" radiusX="100.0" radiusY="100.0" startAngle="180.0" stroke="#b7cf15" strokeType="INSIDE" strokeWidth="10.0" />
+            <Arc fx:id="blueArc" fill="#2197ff00" layoutX="-5.0" layoutY="52.0" length="90.0" radiusX="100.0" radiusY="100.0" startAngle="270.0" stroke="#137ad4" strokeType="INSIDE" strokeWidth="10.0" />
+         </children>
+      </Group>
+      <Button layoutX="208.0" layoutY="373.0" mnemonicParsing="false" onMouseClicked="#BackToMainMenu" text="MainMenu" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="20.0" />
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" />
+      <AnchorPane layoutX="130.0" layoutY="400.0" prefHeight="90.0" prefWidth="85.0" styleClass="background" stylesheets="@ColorSwitch.css" />
+      <AnchorPane layoutX="280.0" layoutY="400.0" prefHeight="80.0" prefWidth="90.0" styleClass="background" stylesheets="@star.css" />
    </children>
 </AnchorPane>

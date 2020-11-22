@@ -15,20 +15,20 @@ public class PauseScreen
     @FXML private Button ResumePauseScreen;
     @FXML private ImageView ImageViewPauseScreen;
     @FXML private AnchorPane AnchorPanePauseScreen;
+    @FXML private AnchorPane MainAnchorPane;
 
     public void HomeButton(MouseEvent event) throws IOException
     {
         System.out.println("Home Button on pause screen clicked");
         Parent root= FXMLLoader.load(getClass().getResource("sample.fxml"));
-        AnchorPanePauseScreen.getChildren().setAll(root);
+        MainAnchorPane.getChildren().setAll(root);
     }
 
     public void ResumeButton(MouseEvent event) throws IOException
     {
         System.out.println("Resume Button on pause screen clicked");
         Parent root=FXMLLoader.load(getClass().getResource("GameplayPage.fxml"));
-        AnchorPanePauseScreen.getChildren().setAll(root);
-
+        MainAnchorPane.getChildren().setAll(root);
     }
 
 }

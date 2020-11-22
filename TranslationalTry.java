@@ -23,11 +23,13 @@ public class TranslationalTry implements Initializable
     TranslateTransition translate;
     RotateTransition rotate;
     RotateTransition rotate2;
+    RotateTransition rotate3;
 
     @FXML private AnchorPane AnchorPaneMotionPage;
     @FXML private Group HorBars;
     @FXML private Group CrossObstacle;
     @FXML private Group SquareObstacle;
+    @FXML private Group arcObstacle;
     @FXML private Button MotionButton;
     @FXML private Button TranlateButton;
 
@@ -37,7 +39,7 @@ public class TranslationalTry implements Initializable
 
         translate=new TranslateTransition();
         translate.setFromX(10);
-        translate.setByX(500);
+        translate.setByX(420);
 //        translate.setFromY(10);
 //        translate.setByY(500);
         translate.setDuration(Duration.seconds(1));
@@ -55,7 +57,7 @@ public class TranslationalTry implements Initializable
 
         translate=new TranslateTransition();
         translate.setFromX(0);
-        translate.setByX(400);
+        translate.setByX(420);
         translate.setDuration(Duration.seconds(1));
         translate.setCycleCount(100);
         translate.setInterpolator(Interpolator.LINEAR);
@@ -77,10 +79,19 @@ public class TranslationalTry implements Initializable
         rotate2.setDuration(Duration.seconds(4));
         rotate2.setInterpolator(Interpolator.LINEAR);
 
+        rotate3 = new RotateTransition();
+        rotate3.setAxis(Rotate.Z_AXIS);
+        rotate3.setByAngle(360);
+        rotate3.setCycleCount(500);
+        rotate3.setDuration(Duration.seconds(4));
+        rotate3.setInterpolator(Interpolator.LINEAR);
+
         rotate.setNode(CrossObstacle);
         rotate2.setNode(SquareObstacle);
+        rotate3.setNode(arcObstacle);
         rotate.play();
         rotate2.playFromStart();
+        rotate3.play();
     }
 
     public void BackToMainMenu(MouseEvent event) throws IOException {
